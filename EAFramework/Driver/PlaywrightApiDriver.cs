@@ -1,10 +1,17 @@
-﻿using Microsoft.Playwright;
+﻿using EAFramework.Config;
+using Microsoft.Playwright;
 
 namespace EAFramework.Driver
 {
     public class PlaywrightApiDriver :  IDisposable
     {
         private IPlaywright _playwright;
+        private readonly TestSettings _testSettings;
+
+        public PlaywrightApiDriver(TestSettings testSettings)
+        {
+            _testSettings = testSettings;
+        }
 
         public async Task<IAPIRequestContext> InitializePlaywright(Dictionary<string, string> headers)
         {
@@ -13,7 +20,7 @@ namespace EAFramework.Driver
 
             var apiRequestContext = new APIRequestNewContextOptions
             {
-                BaseURL = "http://localhost:8001/",
+                BaseURL = _testSettings.AppAPIBaseUrl,
                 ExtraHTTPHeaders = headers,
                 IgnoreHTTPSErrors = true
             };

@@ -1,10 +1,10 @@
-using EAappProject.Pages;
-using EAappProject.Pages.Interfaces;
+using EABDDTests.Pages;
+using EABDDTests.Pages.Interfaces;
 using EAFramework.Driver;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Playwright;
 
-namespace EAappProject;
+namespace EABDDTests;
 
 public class Startup
 {

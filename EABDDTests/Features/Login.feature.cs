@@ -145,14 +145,14 @@ await this.FeatureBackgroundAsync();
 #line 9
  await testRunner.GivenAsync("I click the login link", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-                global::Reqnroll.Table table1 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
                             "username",
                             "password"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "admin",
                             "password"});
 #line 10
- await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table1, "When ");
+ await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table2, "When ");
 #line hidden
 #line 13
     await testRunner.ThenAsync("I should be logged in successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
@@ -173,7 +173,7 @@ await this.FeatureBackgroundAsync();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Create a new user account", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 18
+#line 17
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -186,38 +186,38 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line 4
 await this.FeatureBackgroundAsync();
 #line hidden
-#line 19
+#line 18
  await testRunner.GivenAsync("I click the login link", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table3 = new global::Reqnroll.Table(new string[] {
                             "username",
                             "password"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "admin",
                             "password"});
-#line 20
- await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table2, "When ");
+#line 19
+ await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table3, "When ");
 #line hidden
-#line 23
+#line 22
     await testRunner.AndAsync("I click the Employee List link", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 23
     await testRunner.WhenAsync("I click Create new button to create an user", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-                global::Reqnroll.Table table3 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table4 = new global::Reqnroll.Table(new string[] {
                             "Name",
                             "Duration Worked",
                             "Salary",
                             "Role",
                             "Email"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "John Doe",
                             "8",
                             "60000",
                             "Senior",
                             "John@gmail.com"});
-#line 25
-    await testRunner.AndAsync("I enter the user details", ((string)(null)), table3, "And ");
+#line 24
+    await testRunner.AndAsync("I enter the user details", ((string)(null)), table4, "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -235,7 +235,7 @@ await this.FeatureBackgroundAsync();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Create multiple users account", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 31
+#line 30
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -248,46 +248,46 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line 4
 await this.FeatureBackgroundAsync();
 #line hidden
-#line 32
+#line 31
  await testRunner.GivenAsync("I click the login link", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-                global::Reqnroll.Table table4 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table5 = new global::Reqnroll.Table(new string[] {
                             "username",
                             "password"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "admin",
                             "password"});
-#line 33
- await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table4, "When ");
+#line 32
+ await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table5, "When ");
 #line hidden
-#line 36
+#line 35
     await testRunner.AndAsync("I click the Employee List link", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 36
     await testRunner.WhenAsync("I click Create new button to create an user", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-                global::Reqnroll.Table table5 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table6 = new global::Reqnroll.Table(new string[] {
                             "Name",
                             "Duration Worked",
                             "Salary",
                             "Role",
                             "Email"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "John Doe",
                             "8",
                             "60000",
                             "Senior",
                             "John@gmail.com"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Snehal",
                             "8",
                             "6000000",
                             "Senior",
                             "Snehal@gmail.com"});
-#line 38
-    await testRunner.AndAsync("I enter the users details", ((string)(null)), table5, "And ");
+#line 37
+    await testRunner.AndAsync("I enter the users details", ((string)(null)), table6, "And ");
 #line hidden
-#line 42
+#line 41
     await testRunner.AndAsync("I print the dynamic user details", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -306,7 +306,7 @@ await this.FeatureBackgroundAsync();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Create dynamic multiple users account", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 46
+#line 45
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -319,44 +319,44 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line 4
 await this.FeatureBackgroundAsync();
 #line hidden
-#line 47
+#line 46
  await testRunner.GivenAsync("I click the login link", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-                global::Reqnroll.Table table6 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table7 = new global::Reqnroll.Table(new string[] {
                             "username",
                             "password"});
-                table6.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "admin",
                             "password"});
-#line 48
- await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table6, "When ");
+#line 47
+ await testRunner.WhenAsync("I enter valid username and password", ((string)(null)), table7, "When ");
 #line hidden
-#line 51
+#line 50
     await testRunner.AndAsync("I click the Employee List link", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 51
     await testRunner.WhenAsync("I click Create new button to create an user", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-                global::Reqnroll.Table table7 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table8 = new global::Reqnroll.Table(new string[] {
                             "Name",
                             "Duration Worked",
                             "Salary",
                             "Role",
                             "Email"});
-                table7.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "John Doe",
                             "8",
                             "60000",
                             "Senior",
                             "John@gmail.com"});
-                table7.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Snehal",
                             "8",
                             "6000000",
                             "Senior",
                             "Snehal@gmail.com"});
-#line 53
-    await testRunner.AndAsync("I enter dynamic users details", ((string)(null)), table7, "And ");
+#line 52
+    await testRunner.AndAsync("I enter dynamic users details", ((string)(null)), table8, "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

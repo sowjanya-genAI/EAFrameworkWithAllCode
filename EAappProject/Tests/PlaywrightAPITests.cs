@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using AutoFixture.Xunit2;
-using EAappProject.Model;
+using EABDDTests.Model;
 using EAFramework.Driver;
 using FluentAssertions;
 using FluentAssertions.Execution;
@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace EAappProject.Tests
+namespace EABDDTests.Tests
 {
     public class PlaywrightAPITests : IClassFixture<PlaywrightApiDriver>
     {

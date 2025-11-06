@@ -1,6 +1,6 @@
 ﻿using Microsoft.Playwright;
 
-namespace EAappProject.Controls
+namespace EABDDTests.Controls
 {
     public static class CustomControlUtilities
     {
