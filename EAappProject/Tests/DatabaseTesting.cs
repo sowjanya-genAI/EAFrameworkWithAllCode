@@ -1,12 +1,12 @@
 using AutoFixture.Xunit2;
-using EAappProject.Model;
-using EAappProject.Pages;
+using EABDDTests.Model;
+using EABDDTests.Pages;
 using EAFramework.Utilities;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Playwright;
 
-namespace EAappProject.Tests;
+namespace EABDDTests.Tests;
 
 public class DatabaseTesting
 {

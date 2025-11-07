@@ -13,7 +13,6 @@ Scenario: Perform login with valid credentials
     Then I should be logged in successfully
 
 
-
 @smoke
 Scenario: Create a new user account
 	Given I click the login link
