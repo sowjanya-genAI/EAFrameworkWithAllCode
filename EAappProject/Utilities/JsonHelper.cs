@@ -1,4 +1,4 @@
-﻿using EAappProject.Model;
+﻿using EABDDTests.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EAappProject.Utilities
+namespace EABDDTests.Utilities
 {
     public class JsonHelper
     {
