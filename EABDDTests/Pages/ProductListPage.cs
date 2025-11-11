@@ -1,7 +1,7 @@
-﻿using EAappProject.Model;
+﻿using EABDDTests.Model;
 using Microsoft.Playwright;
 
-namespace EAappProject.Pages;
+namespace EABDDTests.Pages;
 
 public interface IProductListPage
 {
@@ -14,9 +14,9 @@ public interface IProductListPage
     Task<bool> IsProductExistAsync(ProductDetails productDetails);
     // Task<EditPage> EditProductAsync(ProductDetails productDetails);
     // Task<bool> isModifiedProductExistAsync(ProductDetails productDetails);
-     Task DeleteProductAsync(ProductDetails productDetails);
+    Task DeleteProductAsync(ProductDetails productDetails);
     // Task ValidateProductNotExistAsync(ProductDetails productDetails);
-     Task DeleteModifiedProductAsync(ProductDetails productDetails);
+    Task DeleteModifiedProductAsync(ProductDetails productDetails);
     Task DeleteProductAsyncWithName(string name);
     // Task ValidateModifiedProductNotExistAsync(ProductDetails productDetails);
     // Task<DetailsPage> DetailsProductAsync(ProductDetails productDetails);
@@ -24,7 +24,7 @@ public interface IProductListPage
 
 public class ProductListPage(IPage page) : IProductListPage
 {
-    
+
     ILocator pageTitleTxt => page.GetByRole(AriaRole.Heading, new() { Name = "List" });
     ILocator btnCreate => page.GetByRole(AriaRole.Link, new() { Name = "Create" });
     public ILocator btnDelete(ILocator parentRow) => parentRow.GetByRole(AriaRole.Link, new() { Name = "Delete" });
@@ -35,7 +35,7 @@ public class ProductListPage(IPage page) : IProductListPage
 
     public async Task CreateProductAsync() => await btnCreate.ClickAsync();
 
-    public ILocator GetProductRow(string name, string description=null, string price=null, ProductType productType=ProductType.EXTERNAL)
+    public ILocator GetProductRow(string name, string description = null, string price = null, ProductType productType = ProductType.EXTERNAL)
     {
         return page.GetByRole(AriaRole.Row, new() { Name = name })
             .Filter(new() { HasText = description })
@@ -49,7 +49,7 @@ public class ProductListPage(IPage page) : IProductListPage
 
         return await productRow.IsVisibleAsync();
     }
-  
+
     // public async Task<EditPage> EditProductAsync(ProductDetails productDetails)
     // {
     //     var productRow = GetProductRow(productDetails.Name, productDetails.Description, productDetails.Price.ToString(), productDetails.ProductType);

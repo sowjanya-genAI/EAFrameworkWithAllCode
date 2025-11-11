@@ -1,7 +1,8 @@
-using EAappProject.Pages.Interfaces;
+using EABDDTests.Pages.Interfaces;
+using EABDDTests.Pages;
 using Microsoft.Playwright;
 
-namespace EAappProject.Pages;
+namespace EABDDTests.Pages;
 
 public interface IBasePage
 {
@@ -23,9 +24,9 @@ public class BasePage : IBasePage
         _homePage = new Lazy<IHomePage>(GetHomePage(page));
         _productListPage = new Lazy<IProductListPage>(() => new ProductListPage(page));
         _createProductPage = new Lazy<ICreateProductPage>(() => new CreateProductPage(page));
-        _deletePage= new Lazy<IDeletePage>(() => new DeletePage(page));
+        _deletePage = new Lazy<IDeletePage>(() => new DeletePage(page));
     }
-    
+
     public HomePage GetHomePage(IPage page)
     {
         return new HomePage(page);

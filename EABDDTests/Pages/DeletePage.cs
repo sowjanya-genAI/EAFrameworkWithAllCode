@@ -1,6 +1,6 @@
 ﻿using Microsoft.Playwright;
 
-namespace EAappProject.Pages;
+namespace EABDDTests.Pages;
 
 public interface IDeletePage
 {

@@ -1,4 +1,5 @@
-﻿using Microsoft.Playwright;
+﻿using EAFramework.Config;
+using Microsoft.Playwright;
 
 namespace EAFramework.Driver
 {
@@ -9,11 +10,16 @@ namespace EAFramework.Driver
 
     public class PlaywrightDriver :  IDisposable, IPlaywrightDriver
     {
+        public PlaywrightDriver(TestSettings testSettings)
+        {
+            _testSettings = testSettings;
+        }
 
         private IPage _page;
         private IPlaywright _playwright;
         private IBrowser _browser;
         private IBrowserContext _context;
+        private readonly TestSettings _testSettings;
 
         public async Task<IPage> InitializePlaywright()
         {
@@ -35,7 +41,7 @@ namespace EAFramework.Driver
             _page = await _context.NewPageAsync();
 
             //URL
-            await _page.GotoAsync("http://localhost:8000/");
+            await _page.GotoAsync(_testSettings.AppBaseURl);
 
             return _page;
         }
